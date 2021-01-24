@@ -1,0 +1,12 @@
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\bin\Debug\net5.0\Core.deps.json
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\bin\Debug\net5.0\Core.dll
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\bin\Debug\net5.0\ref\Core.dll
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\bin\Debug\net5.0\Core.pdb
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\Core.csprojAssemblyReference.cache
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\Core.AssemblyInfoInputs.cache
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\Core.AssemblyInfo.cs
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\Core.dll
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\ref\Core.dll
+C:\Users\sleepypillow\Git Repo\personal-website-with-aspnet-and-angular\Core\obj\Debug\net5.0\Core.pdb
