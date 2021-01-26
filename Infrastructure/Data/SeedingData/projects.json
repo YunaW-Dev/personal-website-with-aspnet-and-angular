@@ -1,0 +1,72 @@
+[
+  {
+    "Name": "This Website!",
+    "Description": "This website is built with Asp.Net webapi and Angular from the ground up by myself. It utilizes Microsoft EntityFrameWork Core and SQL as a storage means, and it was a blast to work on personal project such as this, because it brings together some knowledge from the class, and combine it with my creativity and research. The Github Link is as following: https://github.com/YunaW-Dev/personal-website-with-aspnet-and-angular",
+    "PictureUrl": "images/projects/placeholder.jpg",
+    "ProjectType": 1,
+    "ProjectYear": 2021
+  },
+  {
+    "Name": "Magnificent Creations",
+    "Description": "I created this website for my employee Magnificent Creations Limitee back in 2020 Summer, when the pandamic restrictions first took place in Ontario. My main duty in this job was mostly related to the web design. Here is a link to the website: https://www.magnificentcreations.com/",
+    "PictureUrl": "images/projects/mc.jpg",
+    "ProjectType": 1,
+    "ProjectYear": 2020
+  },
+  {
+    "Name": "Kids Coaching Connection",
+    "Description": "This website is the sister website of the Magnificent Creations, and it is also created during my employeement in Magnificent Creations Limitee. The link to the website is as following: https://www.kidscoachingconnection.com/",
+    "PictureUrl": "images/projects/kcc.jpg",
+    "ProjectType": 1,
+    "ProjectYear": 2020
+  },
+  {
+    "Name": "Asian Network Cuisine",
+    "Description": "This website is a team web project for school, where it is only hosted in localhost. It utilizees entityframework core and identity framework, and allows reviews to be posted by the logged-in users. Here is a video demo, my part came in at around 30 seconds: https://youtu.be/Dbf-ViuaBZI",
+    "PictureUrl": "images/projects/anc.jpg",
+    "ProjectType": 1,
+    "ProjectYear": 2020
+  },
+  {
+    "Name": "Covid Hotspot App (with WatchOS)",
+    "Description": "This IOS group project is created to give the updated infos on the go, providing insight into the safeness of the area before venturing into it. The information is retrived through json from the web, and it also has WatchOS integrated so the most important information is available at a short glance.",
+    "PictureUrl": "images/projects/covid-ios.png",
+    "ProjectType": 2,
+    "ProjectYear": 2020
+  },
+  {
+    "Name": "Memorable Location App",
+    "Description": "This App is currently in development using kotlin, featuring the ability to store your favourite places on the map and at a glance. The user will be able to leave custom notes and picture about what makes this place special. Ideal for traval enthustiastics during the time of covid when the outdoor exploring is limited.",
+    "PictureUrl": "images/projects/placeholder.jpg",
+    "ProjectType": 2,
+    "ProjectYear": 2021
+  },
+  {
+    "Name": "Weather Report App",
+    "Description": "This IOS app retrive the json info from the web and based on the user current location gives the most updated weather information, such as temperature, wind speed and so on.",
+    "PictureUrl": "images/projects/placeholder.jpg",
+    "ProjectType": 2,
+    "ProjectYear": 2020
+  },
+  {
+    "Name": "Kids Coaching Connection App",
+    "Description": "This android application is created during my employeement at Magnificent Creations Limitee. It provides kids a way to draw digitally with some of the most magnificent I AM cards. It was a side project that was not a part of the original job description of the two websites.",
+    "PictureUrl": "images/projects/placeholder.jpg",
+    "ProjectType": 2,
+    "ProjectYear": 2020
+  },
+  {
+    "Name": "Cryptocurrency Simulator with Python",
+    "Description": "This is a personal learning project. As lifelong learner, I recently took interest in how cryptocurrency works and blockchain technologies.",
+    "PictureUrl": "images/projects/placeholder.jpg",
+    "ProjectType": 3,
+    "ProjectYear": 2021
+  },
+  {
+    "Name": "Covid Simulator with Python",
+    "Description": "This is a python application that I thought might serve as a reminder to people that how dangerous the virus, such as covid, is. It doesn't do more than spreading itself around on the surface level, just like what the \"virus\" in this code does.",
+    "PictureUrl": "images/projects/placeholder.jpg",
+    "ProjectType": 3,
+    "ProjectYear": 2021
+  }
+]
