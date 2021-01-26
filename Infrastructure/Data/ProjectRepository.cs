@@ -17,12 +17,26 @@ namespace Infrastructure.Data
         }
         public async Task<Project> GetProjectByIdAsync(int id)
         {
-            return await _context.Projects.FindAsync(id);
+            return await _context.Projects
+            .Include(p => p.ProjectType)
+            .Include(p => p.ProjectYear).FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<IReadOnlyList<Project>> GetProjectsAsync()
         {
-            return await _context.Projects.ToListAsync();
+            return await _context.Projects
+            .Include(p => p.ProjectType)
+            .Include(p => p.ProjectYear).ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<ProjectType>> GetProjectTypesAsync()
+        {
+            return await _context.ProjectTypes.ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<ProjectYear>> GetProjectYearsAsync()
+        {
+            return await _context.ProjectYears.ToListAsync();
         }
     }
 }

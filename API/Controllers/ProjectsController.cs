@@ -31,5 +31,21 @@ namespace API.Controllers
         {
             return await _repo.GetProjectByIdAsync(id);
         }
+
+        [HttpGet("types")]
+        public async Task<ActionResult<IReadOnlyList<ProjectType>>> GetProjectTypes()
+        {
+            return Ok(await _repo.GetProjectTypesAsync());
+        }
+
+        [HttpGet("years")]
+        public async Task<ActionResult<IReadOnlyList<ProjectYear>>> GetProjectYears()
+        {
+            return Ok(await _repo.GetProjectYearsAsync());
+        }
+
+
+
+
     }
 }

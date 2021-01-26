@@ -8,5 +8,11 @@ namespace Core.Interfaces
     {
          Task<Project> GetProjectByIdAsync(int id);
          Task<IReadOnlyList<Project>> GetProjectsAsync();
+
+         Task<IReadOnlyList<ProjectType>> GetProjectTypesAsync();
+
+         Task<IReadOnlyList<ProjectYear>> GetProjectYearsAsync();
+
+         
     }
 }
