@@ -23,6 +23,7 @@ namespace API
                 try {
                     var context = services.GetRequiredService<MyContext>();
                     await context.Database.MigrateAsync();
+                    await SeedMyContext.SeedAsync(context, loggerFactory);
                 }catch(Exception ex){
                     var logger = loggerFactory.CreateLogger<Program>();
                     logger.LogError(ex, "migration error");

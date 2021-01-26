@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -47,13 +48,11 @@ namespace Infrastructure.Data
                     }
                     await context.SaveChangesAsync();
                 }
-
-
-
             }
             catch (Exception ex)
             {
-
+                var logger = loggerFactory.CreateLogger<SeedMyContext>();
+                logger.LogError(ex.Message);
             }
         }
     }

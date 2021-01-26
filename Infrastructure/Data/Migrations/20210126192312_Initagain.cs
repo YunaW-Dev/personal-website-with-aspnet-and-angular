@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Data.Migrations
 {
-    public partial class InitAgain : Migration
+    public partial class Initagain : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
