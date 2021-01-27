@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Dtos;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
@@ -28,17 +29,33 @@ namespace API.Controllers
         }
 
     [HttpGet]
-    public async Task<ActionResult<List<Project>>> GetProjects()
+    public async Task<ActionResult<List<Project2ReturnDto>>> GetProjects()
     {
         var spec = new ProjectsWithTYSpec();
         var projects = await _projectsRepo.ListAsync(spec);
-        return Ok(projects);
+        return projects.Select(project => new Project2ReturnDto{
+            Id = project.Id,
+            Name = project.Name,
+            Description = project.Description,
+            PictureUrl = project.PictureUrl,
+            ProjectType = project.ProjectType.Name,
+            ProjectYear = project.ProjectYear.YearNumber  
+        }).ToList();
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Project>> GetProject(int id)
+    public async Task<ActionResult<Project2ReturnDto>> GetProject(int id)
     {
-        return await _projectsRepo.GetByIdAsync(id);
+        var spec = new ProjectsWithTYSpec(id);
+        var project = await _projectsRepo.GetEntityWithSpec(spec);
+        return new Project2ReturnDto{
+            Id = project.Id,
+            Name = project.Name,
+            Description = project.Description,
+            PictureUrl = project.PictureUrl,
+            ProjectType = project.ProjectType.Name,
+            ProjectYear = project.ProjectYear.YearNumber  
+        };
     }
 
     [HttpGet("types")]
@@ -52,9 +69,6 @@ namespace API.Controllers
     {
         return Ok(await _projectYearRepo.ListAllAsync());
     }
-
-
-
 
 }
 }
