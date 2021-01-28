@@ -32,9 +32,9 @@ namespace API.Controllers
         }
 
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<Project2ReturnDto>>> GetProjects()
+    public async Task<ActionResult<IReadOnlyList<Project2ReturnDto>>> GetProjects(int? typeId, int? yearId)
     {
-        var spec = new ProjectsWithTYSpec();
+        var spec = new ProjectsWithTYSpec(typeId, yearId);
         var projects = await _projectsRepo.ListAsync(spec);
         return Ok(_mapper.Map<IReadOnlyList<Project>, IReadOnlyList<Project2ReturnDto>>(projects));
     }
