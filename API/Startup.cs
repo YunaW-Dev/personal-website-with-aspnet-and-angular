@@ -14,6 +14,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Core.Interfaces;
+using API.Helpers;
+using AutoMapper;
 
 namespace API
 {
@@ -31,6 +33,7 @@ namespace API
         {
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+            services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<MyContext>(x => x.UseSqlite(_configuration
             .GetConnectionString("DefaultConnection")));
@@ -53,6 +56,7 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 

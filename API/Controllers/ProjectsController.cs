@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Dtos;
+using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
@@ -18,29 +19,24 @@ namespace API.Controllers
         private readonly IGenericRepository<Project> _projectsRepo;
         private readonly IGenericRepository<ProjectType> _projectTypeRepo;
         private readonly IGenericRepository<ProjectYear> _projectYearRepo;
-
+        private readonly IMapper _mapper;
         public ProjectsController(IGenericRepository<Project> projectsRepo,
         IGenericRepository<ProjectType> projectTypeRepo,
-        IGenericRepository<ProjectYear> projectYearRepo)
+        IGenericRepository<ProjectYear> projectYearRepo,
+        IMapper mapper)
         {
             _projectsRepo = projectsRepo;
             _projectTypeRepo = projectTypeRepo;
             _projectYearRepo = projectYearRepo;
+            _mapper = mapper;
         }
 
     [HttpGet]
-    public async Task<ActionResult<List<Project2ReturnDto>>> GetProjects()
+    public async Task<ActionResult<IReadOnlyList<Project2ReturnDto>>> GetProjects()
     {
         var spec = new ProjectsWithTYSpec();
         var projects = await _projectsRepo.ListAsync(spec);
-        return projects.Select(project => new Project2ReturnDto{
-            Id = project.Id,
-            Name = project.Name,
-            Description = project.Description,
-            PictureUrl = project.PictureUrl,
-            ProjectType = project.ProjectType.Name,
-            ProjectYear = project.ProjectYear.YearNumber  
-        }).ToList();
+        return Ok(_mapper.Map<IReadOnlyList<Project>, IReadOnlyList<Project2ReturnDto>>(projects));
     }
 
     [HttpGet("{id}")]
@@ -48,14 +44,7 @@ namespace API.Controllers
     {
         var spec = new ProjectsWithTYSpec(id);
         var project = await _projectsRepo.GetEntityWithSpec(spec);
-        return new Project2ReturnDto{
-            Id = project.Id,
-            Name = project.Name,
-            Description = project.Description,
-            PictureUrl = project.PictureUrl,
-            ProjectType = project.ProjectType.Name,
-            ProjectYear = project.ProjectYear.YearNumber  
-        };
+        return _mapper.Map<Project, Project2ReturnDto>(project);
     }
 
     [HttpGet("types")]
